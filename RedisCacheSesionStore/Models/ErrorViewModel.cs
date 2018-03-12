@@ -1,6 +1,6 @@
 using System;
 
-namespace RedisCacheSesionStore.Models
+namespace RedisCacheSessionStore.Models
 {
     public class ErrorViewModel
     {

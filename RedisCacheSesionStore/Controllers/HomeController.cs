@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using RedisCacheSesionStore.Models;
+using RedisCacheSessionStore.Models;
+using System;
+using System.Diagnostics;
+using System.Threading.Tasks;
 
-namespace RedisCacheSesionStore.Controllers
+namespace RedisCacheSessionStore.Controllers
 {
     public class HomeController : Controller
     {
