@@ -1,0 +1,9 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+<h3>@ViewData["SessionId"]</h3>
+<h3>@string.Join(",",(IEnumerable<string>)ViewData["Keys"])</h3>
+
+<p>Use this area to provide additional information.</p>

@@ -9,12 +9,7 @@ namespace RedisCacheSessionStore.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-        public async Task<IActionResult> About()
+        public async Task<IActionResult> Index()
         {
             //Load data from distributed data store asynchronously
             await HttpContext.Session.LoadAsync();
@@ -29,7 +24,14 @@ namespace RedisCacheSessionStore.Controllers
                 await HttpContext.Session.CommitAsync();
             }
             ViewData["Message"] = "Value in session: " + storedValue;
+            ViewData["SessionId"] = HttpContext.Session.Id;
+            ViewData["Keys"] = HttpContext.Session.Keys;
 
+            return View();
+        }
+
+        public IActionResult About()
+        {
             return View();
         }
 

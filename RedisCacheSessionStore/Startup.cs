@@ -20,7 +20,7 @@ namespace RedisCacheSessionStore
             services.AddMvc();
             services.AddDistributedRedisCache(o =>
             {
-                o.Configuration = Configuration.GetConnectionString("Redis");
+                o.Configuration = Configuration.GetConnectionString("RedisConnectionString");
             });
             services.AddSession();
         }
